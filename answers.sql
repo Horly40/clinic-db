@@ -65,3 +65,20 @@ GROUP BY productCode, quantityOrdered;
 SELECT checkNumber, MAX(amount) AS highest_amount
 FROM payments
 GROUP BY checkNumber;
+
+ALTER TABLE customers
+ADD INDEX IdxPhone (phone);
+
+CREATE USER 'bob'@'localhost' IDENTIFIED BY 'S$cu3r3!';
+GRANT INSERT ON salesDB.* TO 'bob'@'localhost';
+ALTER USER 'bob'@'localhost' IDENTIFIED BY 'P$55!23';
+ALTER USER 'bob'@'localhost' IDENTIFIED BY 'P$55!23';
+
+DROP INDEX IdxPhone ON customers;
+
+
+
+
+
+
+
